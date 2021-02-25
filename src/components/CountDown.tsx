@@ -1,10 +1,15 @@
 import { useState , useEffect} from 'react';
 import styles from '../styles/components/CountDonw.module.css';
+
+
+
+let countDonwTimeout: NodeJS.Timeout;
+
 export function CountDonw(){
 
     const [time, setTime] = useState(30 * 60);
 
-    const [active, setActive] = useState(false);
+    const [isActive, setIsActive] = useState(false);
 
     const minutes = Math.floor(time/60);
     const seconds = time % 60;
@@ -13,16 +18,22 @@ export function CountDonw(){
     const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
     function startCountDonw(){
-        setActive(true);
+        setIsActive(true);
+    }
+
+    function resetCountDonw(){
+        clearTimeout(countDonwTimeout);
+        setIsActive(false);
+        setTime(30*60);
     }
 
     useEffect(()=>{
-        if(active && time > 0){
-            setTimeout(()=>{
+        if(isActive && time > 0){
+            countDonwTimeout = setTimeout(()=>{
                 setTime(time -1);
             },1000)
         }
-    }, [active, time])
+    }, [isActive, time])
     return(
         <div>
             <div className={styles.countDonwContainer}>
@@ -37,13 +48,25 @@ export function CountDonw(){
                 </div>
             </div>
 
-            <button
+            {isActive ? (
+                <button
+                type="button"
+                className={`${styles.countDonwButton} ${styles.countDonwButtonActive}`}
+                onClick={resetCountDonw}
+                >
+                    Abandonar Ciclo
+                </button>
+            ):(
+                <button
                 type="button"
                 className={styles.countDonwButton}
                 onClick={startCountDonw}
-            >
-                Iniciar Ciclo
-            </button>
+                >
+                    Iniciar Ciclo
+                </button>
+            )}
+            
+            
         </div>
     );
 }
