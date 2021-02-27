@@ -1,4 +1,5 @@
-import { useState , useEffect} from 'react';
+import { useState , useEffect, useContext} from 'react';
+import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/CountDonw.module.css';
 
 
@@ -6,6 +7,8 @@ import styles from '../styles/components/CountDonw.module.css';
 let countDonwTimeout: NodeJS.Timeout;
 
 export function CountDonw(){
+
+    const {startNewChallenge} = useContext(ChallengesContext);
 
     const [time, setTime] = useState(0.1 * 60);
     const [isActive, setIsActive] = useState(false);
@@ -35,7 +38,7 @@ export function CountDonw(){
         }else if(isActive && time === 0){
             setHasFinished(true);
             setIsActive(false);
-            setTime(0.1*60);
+            startNewChallenge();
         }
     }, [isActive, time])
     return(
