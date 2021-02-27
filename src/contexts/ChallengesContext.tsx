@@ -1,5 +1,5 @@
 import { match } from 'assert';
-import {createContext, ReactNode, useState} from 'react';
+import {createContext, ReactNode, useEffect, useState} from 'react';
 import challenges from '../../challenges.json';
 
 
@@ -17,6 +17,7 @@ interface ChallengesContextData{
     levelUp:() => void;
     startNewChallenge:() => void;
     resetChallenge:() => void;
+    completeChallenge:() => void;
 }
 interface ChallengesProvaiderProps{
     children:ReactNode;
@@ -32,6 +33,11 @@ export function ChallengesProvaider({ children}:ChallengesProvaiderProps){
     const [activeChallenges, setActiveChallenges] = useState(null);
 
     const experienceToNextLevel = Math.pow((level + 1) * 4,2);
+
+    useEffect(() =>{
+        Notification.requestPermission();
+    }, []);
+
     function levelUp(){
         setLevel(level + 1);
     }
@@ -41,12 +47,36 @@ export function ChallengesProvaider({ children}:ChallengesProvaiderProps){
         const challenge = challenges[randomChallengesIndex];
 
         setActiveChallenges(challenge);
+        new Audio('/notification.mp3').play();
 
-        setChallengesCompleted
+        if(Notification.permission === 'granted'){
+            new Notification('Novo Desafio!', {
+                body: `Valendo ${challenge.amount}xp!`
+            })
+        }
     }
 
     function resetChallenge(){
         setActiveChallenges(null);
+    }
+
+    function completeChallenge(){
+        if(!activeChallenges){
+            return;
+        }
+
+        const {amount} = activeChallenges;
+
+        let finalExperience = currentExperience + amount;
+
+        if (finalExperience >= experienceToNextLevel){
+            finalExperience = finalExperience - experienceToNextLevel;
+            levelUp();
+        }
+
+        setCurrentExperience(finalExperience);
+        setActiveChallenges(null);
+        setChallengesCompleted(challengesCompleted + 1);
     }
 
     return (
@@ -60,6 +90,7 @@ export function ChallengesProvaider({ children}:ChallengesProvaiderProps){
                 levelUp,
                 startNewChallenge,
                 resetChallenge,
+                completeChallenge,
             }
         }>
             {children}
