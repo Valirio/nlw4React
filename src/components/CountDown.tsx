@@ -1,6 +1,5 @@
-import { useState , useEffect, useContext} from 'react';
-import { ChallengesContext } from '../contexts/ChallengesContext';
-import {CountDownContext} from '../contexts/CoundDownContext';
+import { useContext } from 'react';
+import { CountDownContext } from '../contexts/CoundDownContext';
 import styles from '../styles/components/CountDonw.module.css';
 
 
