@@ -5,7 +5,7 @@
 </h3>
 
 <p align="center">
-  <img src="https://github.com/Valirio/nlw4React/src/wallpaper/Wallpaper - 1440x900.png" />
+  <img src="https://github.com/Valirio/nlw4React/blob/main/src/wallpaper/Wallpaper%20-%201440x900.png" />
 </p>
 
 <div>
