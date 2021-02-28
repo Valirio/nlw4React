@@ -14,9 +14,9 @@
 O layout pode ser acessado através da página do Figma, no [seguinte link](https://www.figma.com/file/57cetIcDXOl58VklFROKds/Move.it-1.0-(Copy)?node-id=160%3A2761).
   
   - O projeto foi desenvolvido como um desafio para o Nlw4 e consiste em criar uma solução para 
-melhorar ou orientar um forma mais saudável de levar o dia de trabalho em uma cadeira de escritório fazendo alguns exescícios ou alongamentos confome o tempo decorrido.
+melhorar ou orientar um forma mais saudável ao seu dia de trabalho em uma cadeira de escritório fazendo exescícios ou alongamentos confome o tempo decorrido.
  
- - O Site funciona com um times que será disparado manualmente e ao seu fim o agente deve executar umas das tarefas como um alongamento de mão ou um exercício de  descanço para os olhos.
+ - O Site funciona com um timer que será disparado manualmente e ao seu fim o agente deve executar umas das tarefas como um alongamento de mão ou um exercício de  descanço para os olhos.
   
 </div>
 
@@ -69,8 +69,9 @@ Você pode verificar [the Next.js GitHub repository](https://github.com/vercel/n
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-A maneira mais fácil de dar deploy do seu projeto Next.js é utilizando a [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos Criadores de Next.js.
-
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+A maneira mais fácil de dar deploy do seu projeto Next.js é utilizando a [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos Criadores de Next.js.
 
 Acesse [Next.js deployment documentation](https://nextjs.org/docs/deployment) Para mais detalhes.
