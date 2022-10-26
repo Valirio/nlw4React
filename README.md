@@ -47,6 +47,10 @@ Acesse [http://localhost:3000](http://localhost:3000) utilizando seu navegador p
   <h2> :computer: Tecnologias: </h2>
    <p></p>
 </div>
+<div>
+  <h2> :internet: Demonstração</h2>
+  - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+</div>
 
 ## Learn More
 
@@ -75,3 +79,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 A maneira mais fácil de dar deploy do seu projeto Next.js é utilizando a [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos Criadores de Next.js.
 
 Acesse [Next.js deployment documentation](https://nextjs.org/docs/deployment) Para mais detalhes.
+
