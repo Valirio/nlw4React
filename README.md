@@ -49,7 +49,7 @@ Acesse [http://localhost:3000](http://localhost:3000) utilizando seu navegador p
 </div>
 <div>
   <h2> :computer: Demonstração</h2>
-  - [Move.it](https://nlw4moveit-qt32xnq92-valirio.vercel.app/) - Projeto rodando na Vercel
+  - (https://nlw4moveit-qt32xnq92-valirio.vercel.app/) - Projeto rodando na Vercel
 </div>
 
 ## Learn More
