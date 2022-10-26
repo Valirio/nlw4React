@@ -48,8 +48,8 @@ Acesse [http://localhost:3000](http://localhost:3000) utilizando seu navegador p
    <p></p>
 </div>
 <div>
-  <h2> :internet: Demonstração</h2>
-  - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+  <h2> :computer: Demonstração</h2>
+  - [Move.it](https://nlw4moveit-qt32xnq92-valirio.vercel.app/) - Projeto rodando na Vercel
 </div>
 
 ## Learn More
