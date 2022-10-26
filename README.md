@@ -48,7 +48,7 @@ Acesse [http://localhost:3000](http://localhost:3000) utilizando seu navegador p
    <p></p>
 </div>
 <div>
-  <h2> :computer: Demonstração</h2>
+  <h2> :globe_with_meridians: Produção</h2>
   - (https://nlw4moveit-qt32xnq92-valirio.vercel.app/) - Projeto rodando na Vercel
 </div>
 
